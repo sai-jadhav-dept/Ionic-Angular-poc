@@ -13,6 +13,11 @@ export class PhotoService {
   public photos: UserPhoto[] = [];
 
   private PHOTO_STORAGE: string = 'photos';
+  private SAMPLE_RANDOM_PHOTO: UserPhoto = {
+    filepath: 'sample-random-photo',
+    webviewPath: 'https://picsum.photos/seed/photo-description-test/800/600',
+    description: 'Random sample image for testing description and accessibility features',
+  };
 
   private platform: Platform;
 
@@ -97,6 +102,15 @@ export class PhotoService {
     const { value: photoList } = await Preferences.get({ key: this.PHOTO_STORAGE });
     this.photos = (photoList ? JSON.parse(photoList) : []) as UserPhoto[];
 
+    if (this.photos.length === 0) {
+      this.photos = [this.SAMPLE_RANDOM_PHOTO];
+      await Preferences.set({
+        key: this.PHOTO_STORAGE,
+        value: JSON.stringify(this.photos),
+      });
+      return;
+    }
+
     // If running on the web...
     if (!this.platform.is('hybrid')) {
       for (let photo of this.photos) {
@@ -134,4 +148,5 @@ export class PhotoService {
 export interface UserPhoto {
   filepath: string;
   webviewPath?: string;
+  description?: string;
 }
