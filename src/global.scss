@@ -45,3 +45,84 @@
 		scroll-behavior: auto !important;
 	}
 }
+
+body.tpaw-fallback-profile-visually-impaired {
+	--ion-background-color: #ffffff;
+	--ion-text-color: #111111;
+	--ion-color-step-850: #111111;
+	font-size: 118%;
+	filter: contrast(1.18);
+}
+
+body.tpaw-fallback-profile-visually-impaired,
+body.tpaw-fallback-profile-visually-impaired ion-content,
+body.tpaw-fallback-profile-visually-impaired ion-label,
+body.tpaw-fallback-profile-visually-impaired p,
+body.tpaw-fallback-profile-visually-impaired span,
+body.tpaw-fallback-profile-visually-impaired h1,
+body.tpaw-fallback-profile-visually-impaired h2,
+body.tpaw-fallback-profile-visually-impaired h3,
+body.tpaw-fallback-profile-visually-impaired h4,
+body.tpaw-fallback-profile-visually-impaired h5,
+body.tpaw-fallback-profile-visually-impaired h6,
+body.tpaw-fallback-profile-visually-impaired button {
+	font-size: 1.08em !important;
+	line-height: 1.7 !important;
+}
+
+body.tpaw-fallback-profile-cognitive-learning {
+	--ion-font-family: "Verdana", "Tahoma", sans-serif;
+	letter-spacing: 0.045em;
+	word-spacing: 0.08em;
+	line-height: 1.8;
+}
+
+body.tpaw-fallback-profile-cognitive-learning,
+body.tpaw-fallback-profile-cognitive-learning ion-content,
+body.tpaw-fallback-profile-cognitive-learning p,
+body.tpaw-fallback-profile-cognitive-learning span,
+body.tpaw-fallback-profile-cognitive-learning button,
+body.tpaw-fallback-profile-cognitive-learning ion-label {
+	font-family: "Verdana", "Tahoma", sans-serif !important;
+	line-height: 1.8 !important;
+}
+
+body.tpaw-fallback-profile-epilepsy {
+	filter: saturate(0.85);
+}
+
+body.tpaw-fallback-profile-epilepsy *,
+body.tpaw-fallback-profile-epilepsy *::before,
+body.tpaw-fallback-profile-epilepsy *::after {
+	animation: none !important;
+	transition: none !important;
+}
+
+body.tpaw-fallback-profile-adhd {
+	--ion-font-family: "Trebuchet MS", "Verdana", sans-serif;
+	line-height: 1.85;
+}
+
+body.tpaw-fallback-profile-adhd a,
+body.tpaw-fallback-profile-adhd button {
+	outline: 2px solid #1f6feb;
+	outline-offset: 2px;
+}
+
+body.tpaw-fallback-profile-blindness {
+	--ion-background-color: #000000;
+	--ion-text-color: #ffffff;
+	--ion-color-step-850: #ffffff;
+	filter: grayscale(1) contrast(1.3);
+}
+
+body.tpaw-fallback-profile-blindness,
+body.tpaw-fallback-profile-blindness ion-content,
+body.tpaw-fallback-profile-blindness ion-card,
+body.tpaw-fallback-profile-blindness ion-item,
+body.tpaw-fallback-profile-blindness p,
+body.tpaw-fallback-profile-blindness span,
+body.tpaw-fallback-profile-blindness button {
+	background: #000 !important;
+	color: #fff !important;
+}
